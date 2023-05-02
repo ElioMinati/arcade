@@ -1,0 +1,99 @@
+\hypertarget{classArcade_1_1ScoreSaver}{}\doxysection{Arcade\+::Score\+Saver Class Reference}
+\label{classArcade_1_1ScoreSaver}\index{Arcade::ScoreSaver@{Arcade::ScoreSaver}}
+
+
+Class used for high score saving.  
+
+
+
+
+{\ttfamily \#include $<$Score\+Saver.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1ScoreSaver_a0b5f716ae700bed75c7ff628b6f94670}\label{classArcade_1_1ScoreSaver_a0b5f716ae700bed75c7ff628b6f94670}} 
+\mbox{\hyperlink{classArcade_1_1ScoreSaver_a0b5f716ae700bed75c7ff628b6f94670}{Score\+Saver}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the class. Loads the file that stores the high scores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1ScoreSaver_a95f04b7d662189d52fc48212e3179f12}\label{classArcade_1_1ScoreSaver_a95f04b7d662189d52fc48212e3179f12}} 
+virtual \mbox{\hyperlink{classArcade_1_1ScoreSaver_a95f04b7d662189d52fc48212e3179f12}{$\sim$\+Score\+Saver}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classArcade_1_1ScoreSaver}{Score\+Saver}} object and destroys all attached resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1ScoreSaver_a2ccf096595e8f833f35aa885aea6a2d5}{Save\+Score}} (std\+::string user, std\+::string game, int score)
+\begin{DoxyCompactList}\small\item\em Save the score of the user playing specific game. Only saves score if the score is higher than the previous high score. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classArcade_1_1ScoreSaver_a8e656161ee73cd1c9dfc535fdac579f9}{get\+High\+Score}} (std\+::string user, std\+::string game)
+\begin{DoxyCompactList}\small\item\em Get the High Score of the user on specified game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1ScoreSaver_a0b4334fddd905c1ec96c211b539809c4}\label{classArcade_1_1ScoreSaver_a0b4334fddd905c1ec96c211b539809c4}} 
+virtual void \mbox{\hyperlink{classArcade_1_1ScoreSaver_a0b4334fddd905c1ec96c211b539809c4}{save\+To\+File}} ()
+\begin{DoxyCompactList}\small\item\em Save the global\+Scores map to the high score database file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1ScoreSaver_afd6b056e1e9530d87dcebacfd9ea548a}{add\+To\+Multimap}} (std\+::string user, std\+::string game, int score)
+\begin{DoxyCompactList}\small\item\em Add score of user in specified game to the global\+Scores map. Replaces it if score already exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used for high score saving. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1ScoreSaver_afd6b056e1e9530d87dcebacfd9ea548a}\label{classArcade_1_1ScoreSaver_afd6b056e1e9530d87dcebacfd9ea548a}} 
+\index{Arcade::ScoreSaver@{Arcade::ScoreSaver}!addToMultimap@{addToMultimap}}
+\index{addToMultimap@{addToMultimap}!Arcade::ScoreSaver@{Arcade::ScoreSaver}}
+\doxysubsubsection{\texorpdfstring{addToMultimap()}{addToMultimap()}}
+{\footnotesize\ttfamily void Arcade\+::\+Score\+Saver\+::add\+To\+Multimap (\begin{DoxyParamCaption}\item[{std\+::string}]{user,  }\item[{std\+::string}]{game,  }\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add score of user in specified game to the global\+Scores map. Replaces it if score already exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & User to set high score to \\
+\hline
+{\em game} & Game to set high score to \\
+\hline
+{\em score} & Score of the user \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1ScoreSaver_a8e656161ee73cd1c9dfc535fdac579f9}\label{classArcade_1_1ScoreSaver_a8e656161ee73cd1c9dfc535fdac579f9}} 
+\index{Arcade::ScoreSaver@{Arcade::ScoreSaver}!getHighScore@{getHighScore}}
+\index{getHighScore@{getHighScore}!Arcade::ScoreSaver@{Arcade::ScoreSaver}}
+\doxysubsubsection{\texorpdfstring{getHighScore()}{getHighScore()}}
+{\footnotesize\ttfamily int Arcade\+::\+Score\+Saver\+::get\+High\+Score (\begin{DoxyParamCaption}\item[{std\+::string}]{user,  }\item[{std\+::string}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the High Score of the user on specified game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & User to retrieve high score from \\
+\hline
+{\em game} & Game to retrieve high score from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: Score of the user on specified game 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1ScoreSaver_a2ccf096595e8f833f35aa885aea6a2d5}\label{classArcade_1_1ScoreSaver_a2ccf096595e8f833f35aa885aea6a2d5}} 
+\index{Arcade::ScoreSaver@{Arcade::ScoreSaver}!SaveScore@{SaveScore}}
+\index{SaveScore@{SaveScore}!Arcade::ScoreSaver@{Arcade::ScoreSaver}}
+\doxysubsubsection{\texorpdfstring{SaveScore()}{SaveScore()}}
+{\footnotesize\ttfamily void Arcade\+::\+Score\+Saver\+::\+Save\+Score (\begin{DoxyParamCaption}\item[{std\+::string}]{user,  }\item[{std\+::string}]{game,  }\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save the score of the user playing specific game. Only saves score if the score is higher than the previous high score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & User represented by a string \\
+\hline
+{\em game} & Game the score was achieved on \\
+\hline
+{\em score} & Score the user achieved \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/Score\+Saver.\+hpp\item 
+src/utils/Score\+Saver.\+cpp\end{DoxyCompactItemize}

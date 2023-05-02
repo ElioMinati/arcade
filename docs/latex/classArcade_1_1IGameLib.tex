@@ -1,0 +1,176 @@
+\hypertarget{classArcade_1_1IGameLib}{}\doxysection{Arcade\+::IGame\+Lib Class Reference}
+\label{classArcade_1_1IGameLib}\index{Arcade::IGameLib@{Arcade::IGameLib}}
+
+
+Generic interface used for the implementation of games librairies.  
+
+
+
+
+{\ttfamily \#include $<$IGame\+Lib.\+hpp$>$}
+
+Inheritance diagram for Arcade\+::IGame\+Lib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classArcade_1_1IGameLib}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a3243f08b84930f3ff29d82d9a2a43582}\label{classArcade_1_1IGameLib_a3243f08b84930f3ff29d82d9a2a43582}} 
+virtual \mbox{\hyperlink{classArcade_1_1IGameLib_a3243f08b84930f3ff29d82d9a2a43582}{$\sim$\+IGame\+Lib}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classArcade_1_1IGameLib}{IGame\+Lib}} object, closes all associated resources. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classArcade_1_1IGameLib_a9ea819a73813c0287d6ec2967bb3465f}{get\+Grid}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the \+\_\+map of the current game instance. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classArcade_1_1IGameLib_a5f1cb5147df0ee5e2a6056c6d6f5b682}{get\+Score}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the \+\_\+score variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a028128a320ed2242c3cc31769e476b7e}\label{classArcade_1_1IGameLib_a028128a320ed2242c3cc31769e476b7e}} 
+virtual void \mbox{\hyperlink{classArcade_1_1IGameLib_a028128a320ed2242c3cc31769e476b7e}{start}} ()=0
+\begin{DoxyCompactList}\small\item\em Start the instance of the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGameLib_ab948817bdc4bc22a729b0c08b91855e9}{send\+Input}} (Arcade\+::\+Keys key)=0
+\begin{DoxyCompactList}\small\item\em Store the key given as parameter in the instancied game. \end{DoxyCompactList}\item 
+virtual std\+::unordered\+\_\+map$<$ char, Arcade\+::\+Colors $>$ \mbox{\hyperlink{classArcade_1_1IGameLib_aeed8b0afa0c548db8a69c1c391d4fcc4}{get\+Color\+Map}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the Color Map object. \end{DoxyCompactList}\item 
+virtual std\+::unordered\+\_\+map$<$ char, char $>$ \mbox{\hyperlink{classArcade_1_1IGameLib_a5d2df2c18ea413d482acd146db766b62}{get\+Char\+Display\+Map}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the Char Display Map object. \end{DoxyCompactList}\item 
+virtual std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \mbox{\hyperlink{classArcade_1_1IGameLib_a54a098936537fba282cce5b8cf673f15}{get\+Sprites\+Map}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the Sprites Map object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classArcade_1_1IGameLib_a493449620ec708c8513c1cd104b87978}{get\+Game\+Music}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the Game Music object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classArcade_1_1IGameLib_a321f012e156d6b3b64c0f8fc7cc72ed0}{get\+In\+Loop\+Music}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the In Loop Music object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGameLib_a6111214fb649d22e6c7ee82877542224}{set\+Map}} (std\+::vector$<$ std\+::string $>$ map)=0
+\begin{DoxyCompactList}\small\item\em Set the \+\_\+map of the instancied game to the map given as parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface used for the implementation of games librairies. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a5d2df2c18ea413d482acd146db766b62}\label{classArcade_1_1IGameLib_a5d2df2c18ea413d482acd146db766b62}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getCharDisplayMap@{getCharDisplayMap}}
+\index{getCharDisplayMap@{getCharDisplayMap}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getCharDisplayMap()}{getCharDisplayMap()}}
+{\footnotesize\ttfamily virtual std\+::unordered\+\_\+map$<$char, char$>$ Arcade\+::\+IGame\+Lib\+::get\+Char\+Display\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Char Display Map object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$char, char$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_aeed8b0afa0c548db8a69c1c391d4fcc4}\label{classArcade_1_1IGameLib_aeed8b0afa0c548db8a69c1c391d4fcc4}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getColorMap@{getColorMap}}
+\index{getColorMap@{getColorMap}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getColorMap()}{getColorMap()}}
+{\footnotesize\ttfamily virtual std\+::unordered\+\_\+map$<$char, Arcade\+::\+Colors$>$ Arcade\+::\+IGame\+Lib\+::get\+Color\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Color Map object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$char, Arcade\+::\+Colors$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a493449620ec708c8513c1cd104b87978}\label{classArcade_1_1IGameLib_a493449620ec708c8513c1cd104b87978}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getGameMusic@{getGameMusic}}
+\index{getGameMusic@{getGameMusic}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getGameMusic()}{getGameMusic()}}
+{\footnotesize\ttfamily virtual std\+::string Arcade\+::\+IGame\+Lib\+::get\+Game\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Game Music object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a9ea819a73813c0287d6ec2967bb3465f}\label{classArcade_1_1IGameLib_a9ea819a73813c0287d6ec2967bb3465f}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getGrid@{getGrid}}
+\index{getGrid@{getGrid}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getGrid()}{getGrid()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Arcade\+::\+IGame\+Lib\+::get\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the \+\_\+map of the current game instance. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a321f012e156d6b3b64c0f8fc7cc72ed0}\label{classArcade_1_1IGameLib_a321f012e156d6b3b64c0f8fc7cc72ed0}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getInLoopMusic@{getInLoopMusic}}
+\index{getInLoopMusic@{getInLoopMusic}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getInLoopMusic()}{getInLoopMusic()}}
+{\footnotesize\ttfamily virtual std\+::string Arcade\+::\+IGame\+Lib\+::get\+In\+Loop\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the In Loop Music object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a5f1cb5147df0ee5e2a6056c6d6f5b682}\label{classArcade_1_1IGameLib_a5f1cb5147df0ee5e2a6056c6d6f5b682}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getScore@{getScore}}
+\index{getScore@{getScore}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily virtual int Arcade\+::\+IGame\+Lib\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the \+\_\+score variable. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a54a098936537fba282cce5b8cf673f15}\label{classArcade_1_1IGameLib_a54a098936537fba282cce5b8cf673f15}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!getSpritesMap@{getSpritesMap}}
+\index{getSpritesMap@{getSpritesMap}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{getSpritesMap()}{getSpritesMap()}}
+{\footnotesize\ttfamily virtual std\+::unordered\+\_\+map$<$char, std\+::string$>$ Arcade\+::\+IGame\+Lib\+::get\+Sprites\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Sprites Map object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$char, std\+::string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_ab948817bdc4bc22a729b0c08b91855e9}\label{classArcade_1_1IGameLib_ab948817bdc4bc22a729b0c08b91855e9}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!sendInput@{sendInput}}
+\index{sendInput@{sendInput}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{sendInput()}{sendInput()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGame\+Lib\+::send\+Input (\begin{DoxyParamCaption}\item[{Arcade\+::\+Keys}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Store the key given as parameter in the instancied game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1IGameLib_a6111214fb649d22e6c7ee82877542224}\label{classArcade_1_1IGameLib_a6111214fb649d22e6c7ee82877542224}} 
+\index{Arcade::IGameLib@{Arcade::IGameLib}!setMap@{setMap}}
+\index{setMap@{setMap}!Arcade::IGameLib@{Arcade::IGameLib}}
+\doxysubsubsection{\texorpdfstring{setMap()}{setMap()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGame\+Lib\+::set\+Map (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the \+\_\+map of the instancied game to the map given as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/IGame\+Lib.\+hpp\end{DoxyCompactItemize}

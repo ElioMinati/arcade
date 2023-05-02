@@ -1,0 +1,69 @@
+\hypertarget{classDLLoader}{}\doxysection{DLLoader Class Reference}
+\label{classDLLoader}\index{DLLoader@{DLLoader}}
+
+
+Shared library loader.  
+
+
+
+
+{\ttfamily \#include $<$DLLoader.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDLLoader_a49b607433a826304f1e2e88c0d1085dd}{DLLoader}} (std\+::string lib\+Path)
+\begin{DoxyCompactList}\small\item\em Load a shared library according to the library path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDLLoader_afa4a45ae1d1bd7e52d30b4c0f8ee7d9d}\label{classDLLoader_afa4a45ae1d1bd7e52d30b4c0f8ee7d9d}} 
+virtual \mbox{\hyperlink{classDLLoader_afa4a45ae1d1bd7e52d30b4c0f8ee7d9d}{$\sim$\+DLLoader}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the loaded library, closes the handle. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classDLLoader_ad4c7cf55e558e2c9d8e909f347bc1817}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the Instance object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shared library loader. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDLLoader_a49b607433a826304f1e2e88c0d1085dd}\label{classDLLoader_a49b607433a826304f1e2e88c0d1085dd}} 
+\index{DLLoader@{DLLoader}!DLLoader@{DLLoader}}
+\index{DLLoader@{DLLoader}!DLLoader@{DLLoader}}
+\doxysubsubsection{\texorpdfstring{DLLoader()}{DLLoader()}}
+{\footnotesize\ttfamily DLLoader\+::\+DLLoader (\begin{DoxyParamCaption}\item[{std\+::string}]{lib\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load a shared library according to the library path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib\+Path} & path of shared library to load \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDLLoader_ad4c7cf55e558e2c9d8e909f347bc1817}\label{classDLLoader_ad4c7cf55e558e2c9d8e909f347bc1817}} 
+\index{DLLoader@{DLLoader}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!DLLoader@{DLLoader}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ DLLoader\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Instance object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Template, can be any interface that has ILib as an inherited class \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$\+: pointer to stored interface returned by the dlsym of the entrypoint. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/DLLoader.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,257 @@
+\hypertarget{classArcade_1_1Core}{}\doxysection{Arcade\+::Core Class Reference}
+\label{classArcade_1_1Core}\index{Arcade::Core@{Arcade::Core}}
+
+
+\mbox{\hyperlink{classArcade_1_1Core}{Core}} class used to link games to graphic libraries.  
+
+
+
+
+{\ttfamily \#include $<$Core.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArcade_1_1Core_a8443a9c1fbc038e2f628bde9aac13bc7}{Core}} (std\+::string graphic\+Lib)
+\begin{DoxyCompactList}\small\item\em Initializes the core, lists available game libraries, graphic libraries, and waits for the user to input his name. Then launches the main menu where the user can choose his game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Core_a370e30ef75624c8fadc8d8db4e9bafc0}\label{classArcade_1_1Core_a370e30ef75624c8fadc8d8db4e9bafc0}} 
+\mbox{\hyperlink{classArcade_1_1Core_a370e30ef75624c8fadc8d8db4e9bafc0}{$\sim$\+Core}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classArcade_1_1Core}{Core}} object, close all associated resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Core_a9b1da579f3c8f9161258df5a9be897f3}\label{classArcade_1_1Core_a9b1da579f3c8f9161258df5a9be897f3}} 
+void \mbox{\hyperlink{classArcade_1_1Core_a9b1da579f3c8f9161258df5a9be897f3}{start}} ()
+\begin{DoxyCompactList}\small\item\em start the core and the main loop \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Core_aec0b24c883d4b4cc1128c62b0f943a3b}{set\+Game}} (std\+::string game\+Lib\+Path)
+\begin{DoxyCompactList}\small\item\em Set the game currently used \& loaded. Unloads and closes previous the game with shared library handle associated if it exists. It then opens the library with the \mbox{\hyperlink{classDLLoader}{DLLoader}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Core_a9e52e1aa85dd98a3d14606380d6975a5}{set\+Graphics}} (std\+::string graphic\+Lib\+Path)
+\begin{DoxyCompactList}\small\item\em Set the graphic library currently used \& loaded. Unloads and closes the previous graphic library with shared library handle associated if it exists. It then opens the library with the \mbox{\hyperlink{classDLLoader}{DLLoader}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Core_a3959e80a9644fbac40d129770e998093}\label{classArcade_1_1Core_a3959e80a9644fbac40d129770e998093}} 
+void \mbox{\hyperlink{classArcade_1_1Core_a3959e80a9644fbac40d129770e998093}{listen\+For\+User\+Name}} ()
+\begin{DoxyCompactList}\small\item\em wait for user to input his name, sets the \+\_\+user\+Name variable \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Core_adeb871b8d47326f5efbe7adf460a256f}\label{classArcade_1_1Core_adeb871b8d47326f5efbe7adf460a256f}} 
+void \mbox{\hyperlink{classArcade_1_1Core_adeb871b8d47326f5efbe7adf460a256f}{list\+Game\+Libraries}} ()
+\begin{DoxyCompactList}\small\item\em list available game libraries (raw path) in terminal \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Core_aecd112329b40c582ba0f9ffb9079f638}\label{classArcade_1_1Core_aecd112329b40c582ba0f9ffb9079f638}} 
+void \mbox{\hyperlink{classArcade_1_1Core_aecd112329b40c582ba0f9ffb9079f638}{list\+Graphic\+Libraries}} ()
+\begin{DoxyCompactList}\small\item\em list available graphic libraries (raw path) in terminal \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Core_a5d422ae4a6c4e18cf88d64ac6316d426}{manage\+Inputs}} (Arcade\+::\+Keys user\+Input, std\+::size\+\_\+t \&main\+Music\+Id)
+\begin{DoxyCompactList}\small\item\em manage user input from graphic library \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classArcade_1_1Core_ad130f0fdc20eb277d322c243fe0ee6f8}{get\+Next\+Game\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em Get the next game library available in \char`\"{}available\+Game\+Libs\char`\"{} according to the current game. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classArcade_1_1Core_ac90013e560ecbeb03fc1a7a6e2a7cfde}{get\+Next\+Graphic\+Lib}} ()
+\begin{DoxyCompactList}\small\item\em Get the next graphic library available in \char`\"{}available\+Game\+Libs\char`\"{} according to the current graphic library. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classArcade_1_1Core_a25dcc617295cd3f03222196293ed5f9e}{get\+Libname\+From\+Path}} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Get the Actual name of the library from the path. F.\+E \+: ./lib/arcade\+\_\+sfml.so -\/$>$ sfml. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Core_aa8a7d07a770245404744cd67fb7929d0}{parse\+Libs}} (std\+::vector$<$ std\+::string $>$ libs)
+\begin{DoxyCompactList}\small\item\em Parse libraries available in the \char`\"{}lib\char`\"{} folder and store them accordingly into available\+Game\+Libs \& available\+Graphic\+Libs respectively. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Core_a59bb789e3465bbb3e612a3257c35cbd6}{setup\+Main\+Menu}} (std\+::string graph\+Lib\+Path)
+\begin{DoxyCompactList}\small\item\em Setup the main menu to choose game \& graphic library from. if graphic\+Lib\+Path is an empty string, then the user can choose between available games \& graphic libraries. If graphic library passed as parameter is valid, then it gives the user the oportunity to choose only between available games. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classArcade_1_1Core_a0d8279dc5ec9cc16409a0ce73db67fe6}{get\+Main\+Menu\+Display}} (bool display\+Graphic, int \&max\+\_\+game, int \&max\+\_\+graphic)
+\begin{DoxyCompactList}\small\item\em Get the display object represented by a vector of strings of the main menu according to available games \& graphic libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classArcade_1_1Core_a6ff8927a99ef173953ce011a64213cad}{do\+Arcade}} (std\+::string graphic\+Lib\+Path)
+\begin{DoxyCompactList}\small\item\em static method called from main to launch the core \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classArcade_1_1Core}{Core}} class used to link games to graphic libraries. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classArcade_1_1Core_a8443a9c1fbc038e2f628bde9aac13bc7}\label{classArcade_1_1Core_a8443a9c1fbc038e2f628bde9aac13bc7}} 
+\index{Arcade::Core@{Arcade::Core}!Core@{Core}}
+\index{Core@{Core}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}}
+{\footnotesize\ttfamily Arcade\+::\+Core\+::\+Core (\begin{DoxyParamCaption}\item[{std\+::string}]{graphic\+Lib }\end{DoxyParamCaption})}
+
+
+
+Initializes the core, lists available game libraries, graphic libraries, and waits for the user to input his name. Then launches the main menu where the user can choose his game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphic\+Lib} & path to graphic library to load \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1Core_a6ff8927a99ef173953ce011a64213cad}\label{classArcade_1_1Core_a6ff8927a99ef173953ce011a64213cad}} 
+\index{Arcade::Core@{Arcade::Core}!doArcade@{doArcade}}
+\index{doArcade@{doArcade}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{doArcade()}{doArcade()}}
+{\footnotesize\ttfamily int Arcade\+::\+Core\+::do\+Arcade (\begin{DoxyParamCaption}\item[{std\+::string}]{graphic\+Lib\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+static method called from main to launch the core 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphic\+Lib\+Path} & path to graphic library to load on core start\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+84 on error 
+
+0 on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Core_a25dcc617295cd3f03222196293ed5f9e}\label{classArcade_1_1Core_a25dcc617295cd3f03222196293ed5f9e}} 
+\index{Arcade::Core@{Arcade::Core}!getLibnameFromPath@{getLibnameFromPath}}
+\index{getLibnameFromPath@{getLibnameFromPath}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{getLibnameFromPath()}{getLibnameFromPath()}}
+{\footnotesize\ttfamily std\+::string Arcade\+::\+Core\+::get\+Libname\+From\+Path (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Get the Actual name of the library from the path. F.\+E \+: ./lib/arcade\+\_\+sfml.so -\/$>$ sfml. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path to the library \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string\+: name of raw library path passed as parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Core_a0d8279dc5ec9cc16409a0ce73db67fe6}\label{classArcade_1_1Core_a0d8279dc5ec9cc16409a0ce73db67fe6}} 
+\index{Arcade::Core@{Arcade::Core}!getMainMenuDisplay@{getMainMenuDisplay}}
+\index{getMainMenuDisplay@{getMainMenuDisplay}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{getMainMenuDisplay()}{getMainMenuDisplay()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Arcade\+::\+Core\+::get\+Main\+Menu\+Display (\begin{DoxyParamCaption}\item[{bool}]{display\+Graphic,  }\item[{int \&}]{max\+\_\+game,  }\item[{int \&}]{max\+\_\+graphic }\end{DoxyParamCaption})}
+
+
+
+Get the display object represented by a vector of strings of the main menu according to available games \& graphic libraries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Graphic} & if true, displays graphical library choices, otherwise it isn\textquotesingle{}t displayed \\
+\hline
+{\em max\+\_\+game} & maximum games available \\
+\hline
+{\em max\+\_\+graphic} & maximum graphical libraries available \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ \+: display object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Core_ad130f0fdc20eb277d322c243fe0ee6f8}\label{classArcade_1_1Core_ad130f0fdc20eb277d322c243fe0ee6f8}} 
+\index{Arcade::Core@{Arcade::Core}!getNextGameLib@{getNextGameLib}}
+\index{getNextGameLib@{getNextGameLib}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{getNextGameLib()}{getNextGameLib()}}
+{\footnotesize\ttfamily std\+::string Arcade\+::\+Core\+::get\+Next\+Game\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the next game library available in \char`\"{}available\+Game\+Libs\char`\"{} according to the current game. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string \+: Next game raw path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Core_ac90013e560ecbeb03fc1a7a6e2a7cfde}\label{classArcade_1_1Core_ac90013e560ecbeb03fc1a7a6e2a7cfde}} 
+\index{Arcade::Core@{Arcade::Core}!getNextGraphicLib@{getNextGraphicLib}}
+\index{getNextGraphicLib@{getNextGraphicLib}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{getNextGraphicLib()}{getNextGraphicLib()}}
+{\footnotesize\ttfamily std\+::string Arcade\+::\+Core\+::get\+Next\+Graphic\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the next graphic library available in \char`\"{}available\+Game\+Libs\char`\"{} according to the current graphic library. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string \+: Next graphic library raw path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Core_a5d422ae4a6c4e18cf88d64ac6316d426}\label{classArcade_1_1Core_a5d422ae4a6c4e18cf88d64ac6316d426}} 
+\index{Arcade::Core@{Arcade::Core}!manageInputs@{manageInputs}}
+\index{manageInputs@{manageInputs}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{manageInputs()}{manageInputs()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Core\+::manage\+Inputs (\begin{DoxyParamCaption}\item[{Arcade\+::\+Keys}]{user\+Input,  }\item[{std\+::size\+\_\+t \&}]{main\+Music\+Id }\end{DoxyParamCaption})}
+
+
+
+manage user input from graphic library 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Input} & Arcade\+::\+Keys item that represents the key the user pressed \\
+\hline
+{\em main\+Music\+Id} & id of the main background music. Used for game / graphic library switching \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if ESC was pressed 
+
+false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Core_aa8a7d07a770245404744cd67fb7929d0}\label{classArcade_1_1Core_aa8a7d07a770245404744cd67fb7929d0}} 
+\index{Arcade::Core@{Arcade::Core}!parseLibs@{parseLibs}}
+\index{parseLibs@{parseLibs}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{parseLibs()}{parseLibs()}}
+{\footnotesize\ttfamily void Arcade\+::\+Core\+::parse\+Libs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{libs }\end{DoxyParamCaption})}
+
+
+
+Parse libraries available in the \char`\"{}lib\char`\"{} folder and store them accordingly into available\+Game\+Libs \& available\+Graphic\+Libs respectively. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em libs} & vector of the library paths available in the \char`\"{}lib\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1Core_aec0b24c883d4b4cc1128c62b0f943a3b}\label{classArcade_1_1Core_aec0b24c883d4b4cc1128c62b0f943a3b}} 
+\index{Arcade::Core@{Arcade::Core}!setGame@{setGame}}
+\index{setGame@{setGame}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{setGame()}{setGame()}}
+{\footnotesize\ttfamily void Arcade\+::\+Core\+::set\+Game (\begin{DoxyParamCaption}\item[{std\+::string}]{game\+Lib\+Path }\end{DoxyParamCaption})}
+
+
+
+Set the game currently used \& loaded. Unloads and closes previous the game with shared library handle associated if it exists. It then opens the library with the \mbox{\hyperlink{classDLLoader}{DLLoader}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Lib\+Path} & path to the game library wanted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1Core_a9e52e1aa85dd98a3d14606380d6975a5}\label{classArcade_1_1Core_a9e52e1aa85dd98a3d14606380d6975a5}} 
+\index{Arcade::Core@{Arcade::Core}!setGraphics@{setGraphics}}
+\index{setGraphics@{setGraphics}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{setGraphics()}{setGraphics()}}
+{\footnotesize\ttfamily void Arcade\+::\+Core\+::set\+Graphics (\begin{DoxyParamCaption}\item[{std\+::string}]{graphic\+Lib\+Path }\end{DoxyParamCaption})}
+
+
+
+Set the graphic library currently used \& loaded. Unloads and closes the previous graphic library with shared library handle associated if it exists. It then opens the library with the \mbox{\hyperlink{classDLLoader}{DLLoader}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphic\+Lib\+Path} & path to the graphic library wanted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1Core_a59bb789e3465bbb3e612a3257c35cbd6}\label{classArcade_1_1Core_a59bb789e3465bbb3e612a3257c35cbd6}} 
+\index{Arcade::Core@{Arcade::Core}!setupMainMenu@{setupMainMenu}}
+\index{setupMainMenu@{setupMainMenu}!Arcade::Core@{Arcade::Core}}
+\doxysubsubsection{\texorpdfstring{setupMainMenu()}{setupMainMenu()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Core\+::setup\+Main\+Menu (\begin{DoxyParamCaption}\item[{std\+::string}]{graph\+Lib\+Path }\end{DoxyParamCaption})}
+
+
+
+Setup the main menu to choose game \& graphic library from. if graphic\+Lib\+Path is an empty string, then the user can choose between available games \& graphic libraries. If graphic library passed as parameter is valid, then it gives the user the oportunity to choose only between available games. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph\+Lib\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if ESC was pressed during 
+
+false if ENTER was pressed and user exited menu 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/Core.\+hpp\item 
+src/core/Core.\+cpp\end{DoxyCompactItemize}

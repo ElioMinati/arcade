@@ -1,0 +1,117 @@
+\hypertarget{classFileUtils}{}\doxysection{File\+Utils Class Reference}
+\label{classFileUtils}\index{FileUtils@{FileUtils}}
+
+
+File utilitaries.  
+
+
+
+
+{\ttfamily \#include $<$File\+Utils.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFileUtils_abb87f1bbabb1164634e428aee3559b10}\label{classFileUtils_abb87f1bbabb1164634e428aee3559b10}} 
+\mbox{\hyperlink{classFileUtils_abb87f1bbabb1164634e428aee3559b10}{File\+Utils}} ()
+\begin{DoxyCompactList}\small\item\em Object Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFileUtils_a113a3a0ae84133a66408b20da027c0c7}\label{classFileUtils_a113a3a0ae84133a66408b20da027c0c7}} 
+\mbox{\hyperlink{classFileUtils_a113a3a0ae84133a66408b20da027c0c7}{$\sim$\+File\+Utils}} ()
+\begin{DoxyCompactList}\small\item\em Object Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classFileUtils_a467d3fc1c0c878df6425c3475e61f493}{File\+Exists}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Check if file exists. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classFileUtils_a8afa541d4095987bbaee87c00f58ec04}{read\+From\+File}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Read content of file stored under string form. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classFileUtils_a8eac1d689352854ef0068d26dacc7339}{read\+Directory}} (std\+::string dirpath)
+\begin{DoxyCompactList}\small\item\em Read all directory files. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classFileUtils_acae1d8e9cbf8f8a3aacad808a0477264}{read\+From\+File\+To\+Vector}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Read content of file and store content line by line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File utilitaries. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileUtils_a467d3fc1c0c878df6425c3475e61f493}\label{classFileUtils_a467d3fc1c0c878df6425c3475e61f493}} 
+\index{FileUtils@{FileUtils}!FileExists@{FileExists}}
+\index{FileExists@{FileExists}!FileUtils@{FileUtils}}
+\doxysubsubsection{\texorpdfstring{FileExists()}{FileExists()}}
+{\footnotesize\ttfamily bool File\+Utils\+::\+File\+Exists (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if file exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & path of file to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if file exists 
+
+false if files doesn\textquotesingle{}t exit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileUtils_a8eac1d689352854ef0068d26dacc7339}\label{classFileUtils_a8eac1d689352854ef0068d26dacc7339}} 
+\index{FileUtils@{FileUtils}!readDirectory@{readDirectory}}
+\index{readDirectory@{readDirectory}!FileUtils@{FileUtils}}
+\doxysubsubsection{\texorpdfstring{readDirectory()}{readDirectory()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ File\+Utils\+::read\+Directory (\begin{DoxyParamCaption}\item[{std\+::string}]{dirpath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read all directory files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dirpath} & path of directory to read files from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$\+: list of all files fouond in directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileUtils_a8afa541d4095987bbaee87c00f58ec04}\label{classFileUtils_a8afa541d4095987bbaee87c00f58ec04}} 
+\index{FileUtils@{FileUtils}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!FileUtils@{FileUtils}}
+\doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
+{\footnotesize\ttfamily std\+::string File\+Utils\+::read\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read content of file stored under string form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & path of file to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string\+: content of file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileUtils_acae1d8e9cbf8f8a3aacad808a0477264}\label{classFileUtils_acae1d8e9cbf8f8a3aacad808a0477264}} 
+\index{FileUtils@{FileUtils}!readFromFileToVector@{readFromFileToVector}}
+\index{readFromFileToVector@{readFromFileToVector}!FileUtils@{FileUtils}}
+\doxysubsubsection{\texorpdfstring{readFromFileToVector()}{readFromFileToVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ File\+Utils\+::read\+From\+File\+To\+Vector (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Read content of file and store content line by line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & path of file to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ list of lines read 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/File\+Utils.\+hpp\item 
+src/utils/File\+Utils.\+cpp\end{DoxyCompactItemize}

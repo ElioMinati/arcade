@@ -1,0 +1,176 @@
+\hypertarget{classArcade_1_1IGraphicLib}{}\doxysection{Arcade\+::IGraphic\+Lib Class Reference}
+\label{classArcade_1_1IGraphicLib}\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+
+
+Generic interface used for the implementation of graphic librairies.  
+
+
+
+
+{\ttfamily \#include $<$IGraphic\+Lib.\+hpp$>$}
+
+Inheritance diagram for Arcade\+::IGraphic\+Lib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classArcade_1_1IGraphicLib}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_a57fc39424aebb606cc64ee8d7e40afd5}\label{classArcade_1_1IGraphicLib_a57fc39424aebb606cc64ee8d7e40afd5}} 
+virtual \mbox{\hyperlink{classArcade_1_1IGraphicLib_a57fc39424aebb606cc64ee8d7e40afd5}{$\sim$\+IGraphic\+Lib}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classArcade_1_1IGraphicLib}{IGraphic\+Lib}} object, closes all associated resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_a0d9e7fb529bc18ec2b359360570eece3}{display\+Grid}} (std\+::vector$<$ std\+::string $>$ map)=0
+\item 
+virtual Arcade\+::\+Keys \mbox{\hyperlink{classArcade_1_1IGraphicLib_a13a7a4720702403ab5dfd35d1287780a}{get\+User\+Input}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the user input from the graphics library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_ade80773a1c59e4b7d77d6d0f0da5b2d1}\label{classArcade_1_1IGraphicLib_ade80773a1c59e4b7d77d6d0f0da5b2d1}} 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_ade80773a1c59e4b7d77d6d0f0da5b2d1}{start}} ()=0
+\begin{DoxyCompactList}\small\item\em start the graphic library, inside this function are initialized all of the components necessary for the game display. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_a570034bf612bc05cedec56b6478e3173}{set\+Graphic\+Maps}} (std\+::unordered\+\_\+map$<$ char, Arcade\+::\+Colors $>$ color\+Map, std\+::unordered\+\_\+map$<$ char, char $>$ char\+Map)=0
+\begin{DoxyCompactList}\small\item\em Set the colors \& display characters that will then be used on display. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_ad439d742bd245690716d87ad538a6709}{set\+Sprites\+Map}} (std\+::unordered\+\_\+map$<$ char, std\+::string $>$ sprite\+Map)=0
+\begin{DoxyCompactList}\small\item\em Set the sprites to use on display. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_acaec3ca8c9cdcfd302221af7ac8cf661}{display\+Score}} (int score, std\+::vector$<$ std\+::string $>$ grid)=0
+\begin{DoxyCompactList}\small\item\em Display score on screen. \end{DoxyCompactList}\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{classArcade_1_1IGraphicLib_a959b57deba8a1d99ca69d6b1520c4fe5}{play\+Sound}} (std\+::string sound\+Path)=0
+\begin{DoxyCompactList}\small\item\em Plays a sound. Used to play background music \& ephemere sounds. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_adc1af77d149ad59e5c37d9e8a449252a}{stop\+Sound}} (std\+::size\+\_\+t sound\+Id)=0
+\begin{DoxyCompactList}\small\item\em Stops a sound by its ID. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1IGraphicLib_a1f5eb05db293571b9f55aa9c1008aaea}{display\+High\+Score}} (int score, std\+::vector$<$ std\+::string $>$ grid)=0
+\begin{DoxyCompactList}\small\item\em display high score of player on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic interface used for the implementation of graphic librairies. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_a0d9e7fb529bc18ec2b359360570eece3}\label{classArcade_1_1IGraphicLib_a0d9e7fb529bc18ec2b359360570eece3}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!displayGrid@{displayGrid}}
+\index{displayGrid@{displayGrid}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{displayGrid()}{displayGrid()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGraphic\+Lib\+::display\+Grid (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & display the map. A map is represented by a vector of strings, these contain the characters to display that will then be parsed and displayed according to the color map, char map, and sprite map. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_a1f5eb05db293571b9f55aa9c1008aaea}\label{classArcade_1_1IGraphicLib_a1f5eb05db293571b9f55aa9c1008aaea}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!displayHighScore@{displayHighScore}}
+\index{displayHighScore@{displayHighScore}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{displayHighScore()}{displayHighScore()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGraphic\+Lib\+::display\+High\+Score (\begin{DoxyParamCaption}\item[{int}]{score,  }\item[{std\+::vector$<$ std\+::string $>$}]{grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+display high score of player on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & high score of player \\
+\hline
+{\em grid} & Map that is used to calculate the position of the high score display \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_acaec3ca8c9cdcfd302221af7ac8cf661}\label{classArcade_1_1IGraphicLib_acaec3ca8c9cdcfd302221af7ac8cf661}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!displayScore@{displayScore}}
+\index{displayScore@{displayScore}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{displayScore()}{displayScore()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGraphic\+Lib\+::display\+Score (\begin{DoxyParamCaption}\item[{int}]{score,  }\item[{std\+::vector$<$ std\+::string $>$}]{grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Display score on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Score of the player \\
+\hline
+{\em grid} & Map. Used to calculate position of the score display. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_a13a7a4720702403ab5dfd35d1287780a}\label{classArcade_1_1IGraphicLib_a13a7a4720702403ab5dfd35d1287780a}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!getUserInput@{getUserInput}}
+\index{getUserInput@{getUserInput}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{getUserInput()}{getUserInput()}}
+{\footnotesize\ttfamily virtual Arcade\+::\+Keys Arcade\+::\+IGraphic\+Lib\+::get\+User\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the user input from the graphics library. 
+
+\begin{DoxyReturn}{Returns}
+Arcade\+::\+Keys key that the user pressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_a959b57deba8a1d99ca69d6b1520c4fe5}\label{classArcade_1_1IGraphicLib_a959b57deba8a1d99ca69d6b1520c4fe5}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!playSound@{playSound}}
+\index{playSound@{playSound}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily virtual std\+::size\+\_\+t Arcade\+::\+IGraphic\+Lib\+::play\+Sound (\begin{DoxyParamCaption}\item[{std\+::string}]{sound\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plays a sound. Used to play background music \& ephemere sounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+Path} & path of the sound to play. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t\+: id of the sound that can then be passed to \char`\"{}stop\+Sound\char`\"{} to stop that particular sound 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_a570034bf612bc05cedec56b6478e3173}\label{classArcade_1_1IGraphicLib_a570034bf612bc05cedec56b6478e3173}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!setGraphicMaps@{setGraphicMaps}}
+\index{setGraphicMaps@{setGraphicMaps}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{setGraphicMaps()}{setGraphicMaps()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGraphic\+Lib\+::set\+Graphic\+Maps (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ char, Arcade\+::\+Colors $>$}]{color\+Map,  }\item[{std\+::unordered\+\_\+map$<$ char, char $>$}]{char\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the colors \& display characters that will then be used on display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color\+Map} & unordered\+\_\+map of characters \& color items represented by Arcade\+::\+Colors that will set the color to use for specified character in the map that will displayed \\
+\hline
+{\em char\+Map} & unordered\+\_\+map of characters. Maps a character to a display character. Usefull for Ncurses if you want to display a character other than the one stored in the map. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_ad439d742bd245690716d87ad538a6709}\label{classArcade_1_1IGraphicLib_ad439d742bd245690716d87ad538a6709}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!setSpritesMap@{setSpritesMap}}
+\index{setSpritesMap@{setSpritesMap}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{setSpritesMap()}{setSpritesMap()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGraphic\+Lib\+::set\+Sprites\+Map (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ char, std\+::string $>$}]{sprite\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the sprites to use on display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Map} & unordered\+\_\+map of characters to strings that represent the path of the asset to use as sprite. this map will used on display\+Grid to replace characters by sprites. Can be called each frame to update particular sprites \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1IGraphicLib_adc1af77d149ad59e5c37d9e8a449252a}\label{classArcade_1_1IGraphicLib_adc1af77d149ad59e5c37d9e8a449252a}} 
+\index{Arcade::IGraphicLib@{Arcade::IGraphicLib}!stopSound@{stopSound}}
+\index{stopSound@{stopSound}!Arcade::IGraphicLib@{Arcade::IGraphicLib}}
+\doxysubsubsection{\texorpdfstring{stopSound()}{stopSound()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+IGraphic\+Lib\+::stop\+Sound (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{sound\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stops a sound by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+Id} & sound ID that was generated by \char`\"{}play\+Sound\char`\"{} to stop said sound. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/IGraphic\+Lib.\+hpp\end{DoxyCompactItemize}
